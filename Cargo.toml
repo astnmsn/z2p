@@ -3,6 +3,22 @@ name = "z2p"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "z2p"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+axum = "0.6.18"
+hyper = "0.14.26"
+serde = { version = "1.0.164", features = ["derive"] }
+serde_json = "1.0.96"
+tokio = { version = "1.28.2", features = ["full"] }
+
+[dev-dependencies]
+reqwest = "0.11.18"
+
